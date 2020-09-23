@@ -14,7 +14,10 @@ class AddTypeFieldUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('type')->nullable();
+            $table->string('surname')->after('name');
+            $table->string('telephone')->after('surname');
+            $table->string('nif')->after('telephone');
+            $table->integer('type')->default(3);
         });
     }
 
@@ -26,6 +29,9 @@ class AddTypeFieldUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('surname');
+            $table->dropColumn('telephone');
+            $table->dropColumn('nif');
             $table->dropColumn('type');
         });
     }

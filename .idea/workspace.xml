@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="" />
+    <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_19_102229_add_type_field_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_19_102229_add_type_field_users_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +14,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
@@ -137,6 +144,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hT1ikO9wyRrRSmuamsXoG6oYmN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -183,6 +191,9 @@
       <workItem from="1600020397739" duration="1291000" />
       <workItem from="1600508568308" duration="2607000" />
       <workItem from="1600511186824" duration="5234000" />
+      <workItem from="1600847351030" duration="946000" />
+      <workItem from="1600877493838" duration="602000" />
+      <workItem from="1600895522242" duration="2584000" />
     </task>
     <servers />
   </component>
@@ -202,6 +213,10 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512288765" />
+    <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600897477050">
+      <screen x="0" y="27" width="1866" height="1053" />
+    </state>
+    <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1866.1053@0.27.1866.1053" timestamp="1600897477050" />
     <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600516339964">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
