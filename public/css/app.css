@@ -10899,3 +10899,36 @@ a.text-dark:focus {
   }
 }
 
+.image-main-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.header .title {
+  font-size: 35px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.header .login-register {
+  background-color: white;
+  padding: 15px;
+  margin-left: 15%;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
