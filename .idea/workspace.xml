@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_19_102229_add_type_field_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_19_102229_add_type_field_users_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,6 +190,7 @@
       <workItem from="1600847351030" duration="946000" />
       <workItem from="1600877493838" duration="602000" />
       <workItem from="1600895522242" duration="2584000" />
+      <workItem from="1601133702943" duration="609000" />
     </task>
     <servers />
   </component>

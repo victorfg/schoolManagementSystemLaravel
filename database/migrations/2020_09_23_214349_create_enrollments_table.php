@@ -14,11 +14,15 @@ class CreateEnrollmentsTable extends Migration
     public function up()
     {
         Schema::create('enrollments', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_student');
-            $table->integer('id_course');
+            $table->bigIncrements('id');
+            $table->biginteger('id_course')->unsigned();
+            $table->biginteger('id_student')->unsigned();
             $table->integer('status');
             $table->timestamps();
+        });
+        Schema::table('enrollments', function (Blueprint $table) {
+            $table->foreign('id_course')->references('id')->on('courses');
+            $table->foreign('id_student')->references('id')->on('users');
         });
     }
 
