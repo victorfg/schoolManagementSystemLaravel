@@ -3,8 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="col-md-8">
+        <div class="col-xs-12">
                 {!! Form::open(['url' => url('profile/modify')]) !!}
                     @include('profile.form')
                 {!! Form::close() !!}

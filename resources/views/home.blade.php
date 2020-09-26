@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @extends('layouts.menu')
 @section('content')
-    <h5>{{$type ?? null}}</h5>
+    <!--<h5>{{$type ?? null}}</h5>
     @foreach($users as $user)
         <p>{{$user->name}}</p>
-    @endforeach
+    @endforeach-->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -18,7 +18,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('¡Estas logueado!') }}
                 </div>
             </div>
         </div>
