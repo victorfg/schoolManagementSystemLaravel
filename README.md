@@ -13,11 +13,11 @@ It is a simple Laravel & MySQL application that you can manage a school.
 ---
 
 ### Run Project (windows)
-* git clone https://github.com/victorfg/schoolManagementSystemLaravel.git
-* command: composer install
-* command : npm install
+* `git clone` https://github.com/victorfg/schoolManagementSystemLaravel.git
+* `composer install`
+* `npm install`
 * create Database
-* command : php artisan migrate
+* `php artisan migrate`
 
 ---
 
