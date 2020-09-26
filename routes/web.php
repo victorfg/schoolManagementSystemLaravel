@@ -24,10 +24,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('admin', [AdminController::class, 'index']);
-Route::get('teacher', [TeacherController::class, 'index']);
-Route::get('student', [StudentController::class, 'index']);
-Route::get('test', [TestController::class, 'index']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('admin', [AdminController::class, 'index']);
+    Route::get('teacher', [TeacherController::class, 'index']);
+    Route::get('student', [StudentController::class, 'index']);
+    Route::get('test', [TestController::class, 'index']);
+});
+
 
 
 

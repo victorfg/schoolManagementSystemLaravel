@@ -14,9 +14,9 @@ class AddTypeFieldUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('surname')->after('name');
-            $table->string('telephone')->after('surname');
-            $table->string('nif')->after('telephone');
+            $table->string('surname')->after('name')->default('');
+            $table->string('telephone')->after('surname')->default('');
+            $table->string('nif')->after('telephone')->default('');
             $table->integer('type')->default(3);
         });
     }
