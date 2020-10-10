@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Chilanka');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 // Variables
 @import 'variables';
@@ -10,7 +10,7 @@
 //MAIN PAGE
 
 body{
-    font-family: "Chilanka", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .image-main-div{
@@ -44,9 +44,11 @@ body{
 }
 
 //LOGIN
-
+.logo{
+    width: 80px;
+}
 .header-menu{
-    background: #ececec;
+    background: #f3d250;
 }
 
 //FORMS
@@ -77,4 +79,7 @@ label{
 .card-header{
     background-color: #ececec;
     border-bottom: none;
+}
+.font-weight-bold{
+    font-weight: bold;
 }

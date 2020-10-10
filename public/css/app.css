@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Chilanka);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
@@ -10900,7 +10900,7 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: "Chilanka", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .image-main-div {
@@ -10934,8 +10934,12 @@ body {
   font-weight: bold;
 }
 
+.logo {
+  width: 80px;
+}
+
 .header-menu {
-  background: #ececec;
+  background: #f3d250;
 }
 
 .align-items {
@@ -10963,5 +10967,9 @@ label {
 .card-header {
   background-color: #ececec;
   border-bottom: none;
+}
+
+.font-weight-bold {
+  font-weight: bold;
 }
 

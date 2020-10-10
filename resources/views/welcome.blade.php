@@ -19,12 +19,14 @@
     <body class="image-main-div" style="background-image: url({{asset('images/cover.jpg')}})">
             @if (Route::has('login'))
                 <div class="header">
-                    <div class="title">School Management System</div>
+                    <div class="title">
+                        Sistema de gestión escolar
+                    </div>
                     <div class="login-register">
                         @auth
                             <a href="{{ url('/home') }}">Home</a>
                         @else
-                            <a href="{{ route('login') }}" class="margin-right-10">Login</a>
+                            <a href="{{ route('login') }}">Login</a>
 
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}">Register</a>
