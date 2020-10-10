@@ -8,16 +8,37 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
-    public function schedules()
-    {
-        return $this->hasMany('schedules');
-    }
-    public function courseSubjects()
-    {
-        return $this->hasMany('course_subjects');
-    }
-    public function enrollments()
-    {
-        return $this->hasMany('enrollments');
-    }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'description',
+        'date_start',
+        'date_end',
+        'active',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'active' => 'boolean',
+    ];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'date_start',
+        'date_end',
+    ];
 }

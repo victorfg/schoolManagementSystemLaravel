@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/p6producto3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p6producto3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CourseSubject.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Enrollment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_22_214451_create_courses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_22_214511_create_subjects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_23_214213_create_schedules_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_23_214349_create_enrollments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_23_214503_create_course_subjects_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +160,13 @@
       <path value="$PROJECT_DIR$/vendor/jeroennoten/laravel-adminlte" />
       <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/laravel-shift/blueprint" />
+      <path value="$PROJECT_DIR$/vendor/laravel-shift/faker-registry" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/jasonmccreary/laravel-test-assertions" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hT1ikO9wyRrRSmuamsXoG6oYmN" />
@@ -163,15 +187,23 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.SubjectControllerTest">
+    <configuration name="CourseControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\CourseControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SubjectControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\SubjectControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/SubjectControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -181,6 +213,12 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.SubjectControllerTest" />
+        <item itemvalue="PHPUnit.CourseControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -225,22 +263,22 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601143425053" />
-    <state width="1822" height="352" key="GridCell.Tab.0.bottom" timestamp="1600512495018">
+    <state width="1822" height="383" key="GridCell.Tab.0.bottom" timestamp="1602362995339">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.0.center" timestamp="1600512495017">
+    <state width="1822" height="383" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602362995339" />
+    <state width="1822" height="383" key="GridCell.Tab.0.center" timestamp="1602362995339">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
-    <state width="1822" height="352" key="GridCell.Tab.0.left" timestamp="1600512495017">
+    <state width="1822" height="383" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602362995339" />
+    <state width="1822" height="383" key="GridCell.Tab.0.left" timestamp="1602362995339">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
-    <state width="1822" height="352" key="GridCell.Tab.0.right" timestamp="1600512495017">
+    <state width="1822" height="383" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602362995339" />
+    <state width="1822" height="383" key="GridCell.Tab.0.right" timestamp="1602362995339">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
+    <state width="1822" height="383" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602362995339" />
     <state width="1822" height="352" key="GridCell.Tab.1.bottom" timestamp="1600512495018">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -285,10 +323,10 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1986" y="289" width="615" height="502" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601142705997" />
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1601140868982">
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602363007283">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601140868982" />
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602363007283" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

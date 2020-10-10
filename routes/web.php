@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
@@ -36,7 +38,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');
 });
 
-
-
-
-
+Route::resource('course', CourseController::class);
+Route::resource('subject', SubjectController::class);
