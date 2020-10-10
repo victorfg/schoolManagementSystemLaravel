@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@extends('layouts.menu')
 @section('content')
     <!--<h5>{{$type ?? null}}</h5>
     @foreach($users as $user)
