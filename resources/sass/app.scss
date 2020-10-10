@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Chilanka');
 
 // Variables
 @import 'variables';
@@ -8,6 +8,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 //MAIN PAGE
+
+body{
+    font-family: "Chilanka", sans-serif;
+}
 
 .image-main-div{
     background-repeat: no-repeat;
@@ -23,18 +27,26 @@
 
     .title{
         font-size: 35px;
-        background-color: white;
+        background-color: #ececec;
         padding: 15px;
         border-radius: 25px;
     }
 
     .login-register{
-        background-color: white;
-        padding: 15px;
+        background-color: #ececec;
+        padding: 20px;
         margin-left: 15%;
         border-radius: 20px;
-        font-size: 16px;
+        font-size: 18px; 
+        text-transform: uppercase;
+        font-weight: bold;
     }
+}
+
+//LOGIN
+
+.header-menu{
+    background: #ececec;
 }
 
 //FORMS
@@ -61,4 +73,8 @@
 
 label{
     margin-bottom: 0px;
+}
+.card-header{
+    background-color: #ececec;
+    border-bottom: none;
 }
