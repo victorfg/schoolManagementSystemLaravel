@@ -40,7 +40,7 @@ class CourseSubjectController extends Controller
 
         event(new NewCourseSubject($courseSubject));
 
-        $request->session()->flash('courseSubject.name', $courseSubject->name);
+        $request->session()->flash('courseSubject.id', $courseSubject->id);
 
         return redirect()->route('course-subject.index');
     }

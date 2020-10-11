@@ -8,15 +8,15 @@ class NewCourseSubject
 {
     use SerializesModels;
 
-    public $course_subject;
+    public $courseSubject;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($course_subject)
+    public function __construct($courseSubject)
     {
-        $this->course_subject = $course_subject;
+        $this->courseSubject = $courseSubject;
     }
 }

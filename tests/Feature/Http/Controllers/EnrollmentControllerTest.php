@@ -87,7 +87,7 @@ class EnrollmentControllerTest extends TestCase
         $enrollment = $enrollments->first();
 
         $response->assertRedirect(route('enrollment.index'));
-        $response->assertSessionHas('enrollment.name', $enrollment->name);
+        $response->assertSessionHas('enrollment.id', $enrollment->id);
 
         Event::assertDispatched(NewEnrollment::class, function ($event) use ($enrollment) {
             return $event->enrollment->is($enrollment);

@@ -40,7 +40,7 @@ class ScheduleController extends Controller
 
         event(new NewSchedule($schedule));
 
-        $request->session()->flash('schedule.name', $schedule->name);
+        $request->session()->flash('schedule.id', $schedule->id);
 
         return redirect()->route('schedule.index');
     }

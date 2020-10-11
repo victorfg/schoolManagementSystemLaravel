@@ -90,7 +90,7 @@ class ScheduleControllerTest extends TestCase
         $schedule = $schedules->first();
 
         $response->assertRedirect(route('schedule.index'));
-        $response->assertSessionHas('schedule.name', $schedule->name);
+        $response->assertSessionHas('schedule.id', $schedule->id);
 
         Event::assertDispatched(NewSchedule::class, function ($event) use ($schedule) {
             return $event->schedule->is($schedule);

@@ -81,7 +81,7 @@ class CourseSubjectControllerTest extends TestCase
         $courseSubject = $courseSubjects->first();
 
         $response->assertRedirect(route('course-subject.index'));
-        $response->assertSessionHas('courseSubject.name', $courseSubject->name);
+        $response->assertSessionHas('courseSubject.id', $courseSubject->id);
 
         Event::assertDispatched(NewCourseSubject::class, function ($event) use ($courseSubject) {
             return $event->courseSubject->is($courseSubject);

@@ -40,7 +40,7 @@ class EnrollmentController extends Controller
 
         event(new NewEnrollment($enrollment));
 
-        $request->session()->flash('enrollment.name', $enrollment->name);
+        $request->session()->flash('enrollment.id', $enrollment->id);
 
         return redirect()->route('enrollment.index');
     }
