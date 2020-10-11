@@ -1,7 +1,7 @@
-
+{{--
     @extends('layouts.app')
 
     @section('content')
-        {{$enrollments}}
+        courseSubject.edit template
     @endsection
-
+--}}

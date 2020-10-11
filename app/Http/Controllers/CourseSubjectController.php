@@ -18,7 +18,7 @@ class CourseSubjectController extends Controller
     {
         $courseSubjects = CourseSubject::all();
 
-        return view('coursesubject.index', compact('course_subject'));
+        return view('courseSubject.index', compact('courseSubjects'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CourseSubjectController extends Controller
      */
     public function create(Request $request)
     {
-        return view('coursesubject.create');
+        return view('courseSubject.create');
     }
 
     /**
@@ -36,13 +36,13 @@ class CourseSubjectController extends Controller
      */
     public function store(CourseSubjectStoreRequest $request)
     {
-        $coursesubject = Coursesubject::create($request->validated());
+        $courseSubject = CourseSubject::create($request->validated());
 
-        event(new NewCourseSubject($course_subject));
+        event(new NewCourseSubject($courseSubject));
 
-        $request->session()->flash('coursesubject.name', $coursesubject->name);
+        $request->session()->flash('courseSubject.name', $courseSubject->name);
 
-        return redirect()->route('coursesubject.index');
+        return redirect()->route('course-subject.index');
     }
 
     /**
@@ -52,9 +52,9 @@ class CourseSubjectController extends Controller
      */
     public function show(Request $request, CourseSubject $courseSubject)
     {
-        $coursesubjects = Coursesubject::all();
+        $courseSubjects = CourseSubject::all();
 
-        return view('coursesubject.show', compact('course_subject'));
+        return view('courseSubject.show', compact('courseSubject'));
     }
 
     /**
@@ -64,7 +64,7 @@ class CourseSubjectController extends Controller
      */
     public function edit(Request $request, CourseSubject $courseSubject)
     {
-        return view('coursesubject.edit', compact('course_subject'));
+        return view('courseSubject.edit', compact('courseSubject'));
     }
 
     /**
@@ -74,11 +74,11 @@ class CourseSubjectController extends Controller
      */
     public function update(CourseSubjectUpdateRequest $request, CourseSubject $courseSubject)
     {
-        $coursesubject->update($request->validated());
+        $courseSubject->update($request->validated());
 
-        $request->session()->flash('coursesubject.id', $coursesubject->id);
+        $request->session()->flash('courseSubject.id', $courseSubject->id);
 
-        return redirect()->route('coursesubject.index');
+        return redirect()->route('course-subject.index');
     }
 
     /**
@@ -88,8 +88,8 @@ class CourseSubjectController extends Controller
      */
     public function destroy(Request $request, CourseSubject $courseSubject)
     {
-        $coursesubject->delete();
+        $courseSubject->delete();
 
-        return redirect()->route('coursesubject.index');
+        return redirect()->route('course-subject.index');
     }
 }

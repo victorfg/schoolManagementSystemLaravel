@@ -2,6 +2,6 @@
     @extends('layouts.app')
 
     @section('content')
-        {{$enrrollment}}
+        {{$enrollment}}
     @endsection
 

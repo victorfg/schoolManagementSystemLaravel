@@ -29,8 +29,8 @@ class CourseSubjectControllerTest extends TestCase
         $response = $this->get(route('course-subject.index'));
 
         $response->assertOk();
-        $response->assertViewIs('coursesubject.index');
-        $response->assertViewHas('course_subject');
+        $response->assertViewIs('courseSubject.index');
+        $response->assertViewHas('courseSubjects');
     }
 
 
@@ -42,7 +42,7 @@ class CourseSubjectControllerTest extends TestCase
         $response = $this->get(route('course-subject.create'));
 
         $response->assertOk();
-        $response->assertViewIs('coursesubject.create');
+        $response->assertViewIs('courseSubject.create');
     }
 
 
@@ -73,18 +73,18 @@ class CourseSubjectControllerTest extends TestCase
             'subject_id' => $subject->id,
         ]);
 
-        $courseSubjects = Coursesubject::query()
+        $courseSubjects = CourseSubject::query()
             ->where('course_id', $course->id)
             ->where('subject_id', $subject->id)
             ->get();
         $this->assertCount(1, $courseSubjects);
         $courseSubject = $courseSubjects->first();
 
-        $response->assertRedirect(route('coursesubject.index'));
-        $response->assertSessionHas('coursesubject.name', $courseSubject->name);
+        $response->assertRedirect(route('course-subject.index'));
+        $response->assertSessionHas('courseSubject.name', $courseSubject->name);
 
         Event::assertDispatched(NewCourseSubject::class, function ($event) use ($courseSubject) {
-            return $event->course_subject->is($courseSubject);
+            return $event->courseSubject->is($courseSubject);
         });
     }
 
@@ -100,8 +100,8 @@ class CourseSubjectControllerTest extends TestCase
         $response = $this->get(route('course-subject.show', $courseSubject));
 
         $response->assertOk();
-        $response->assertViewIs('coursesubject.show');
-        $response->assertViewHas('course_subject');
+        $response->assertViewIs('courseSubject.show');
+        $response->assertViewHas('courseSubject');
     }
 
 
@@ -115,8 +115,8 @@ class CourseSubjectControllerTest extends TestCase
         $response = $this->get(route('course-subject.edit', $courseSubject));
 
         $response->assertOk();
-        $response->assertViewIs('coursesubject.edit');
-        $response->assertViewHas('course_subject');
+        $response->assertViewIs('courseSubject.edit');
+        $response->assertViewHas('courseSubject');
     }
 
 
@@ -148,8 +148,8 @@ class CourseSubjectControllerTest extends TestCase
 
         $courseSubject->refresh();
 
-        $response->assertRedirect(route('coursesubject.index'));
-        $response->assertSessionHas('coursesubject.id', $courseSubject->id);
+        $response->assertRedirect(route('course-subject.index'));
+        $response->assertSessionHas('courseSubject.id', $courseSubject->id);
 
         $this->assertEquals($course->id, $courseSubject->course_id);
         $this->assertEquals($subject->id, $courseSubject->subject_id);
@@ -162,11 +162,10 @@ class CourseSubjectControllerTest extends TestCase
     public function destroy_deletes_and_redirects()
     {
         $courseSubject = CourseSubject::factory()->create();
-        $courseSubject = Coursesubject::factory()->create();
 
         $response = $this->delete(route('course-subject.destroy', $courseSubject));
 
-        $response->assertRedirect(route('coursesubject.index'));
+        $response->assertRedirect(route('course-subject.index'));
 
         $this->assertDeleted($courseSubject);
     }

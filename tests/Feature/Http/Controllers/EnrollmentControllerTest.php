@@ -30,7 +30,7 @@ class EnrollmentControllerTest extends TestCase
 
         $response->assertOk();
         $response->assertViewIs('enrollment.index');
-        $response->assertViewHas('enrollment');
+        $response->assertViewHas('enrollments');
     }
 
 

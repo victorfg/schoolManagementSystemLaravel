@@ -30,7 +30,7 @@ class ScheduleControllerTest extends TestCase
 
         $response->assertOk();
         $response->assertViewIs('schedule.index');
-        $response->assertViewHas('schedule');
+        $response->assertViewHas('schedules');
     }
 
 
