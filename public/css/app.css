@@ -72,7 +72,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #90ccf4;
+  background-color: white;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -510,7 +510,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #90ccf4;
+  background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -4237,15 +4237,15 @@ input[type=button].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #90ccf4, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #90ccf4, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #90ccf4, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range::-moz-focus-outer {
@@ -4451,8 +4451,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #90ccf4;
-  border-color: #dee2e6 #dee2e6 #90ccf4;
+  background-color: white;
+  border-color: #dee2e6 #dee2e6 white;
 }
 
 .nav-tabs .dropdown-menu {
@@ -10934,6 +10934,16 @@ body {
   font-weight: bold;
 }
 
+.welcome-text {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.welcome-gif {
+  width: 280px;
+}
+
 .logo {
   width: 80px;
 }
@@ -10942,18 +10952,48 @@ body {
   background: #f3d250;
 }
 
-.align-items {
+.submenu-options .align-items {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.submenu-options .item-option {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #90ccf4;
+}
+
+.submenu-options a {
+  color: black;
+  text-decoration: none;
+}
+
+.submenu-options .item-option:hover {
+  background-color: #f78888;
+}
+
+.submenu-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
 .margin-top-20 {
   margin-top: 20px;
 }
 
+.margin-top-50 {
+  margin-top: 50px;
+}
+
 .margin-right-10 {
   margin-right: 10px;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
 }
 
 .margin-left-10 {
@@ -10971,5 +11011,15 @@ label {
 
 .font-weight-bold {
   font-weight: bold;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.center-horizontal-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
