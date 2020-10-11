@@ -1,0 +1,152 @@
+models:
+  Course:
+    name: Varchar
+    description: Varchar
+    date_start: DateTime
+    date_end: DateTime
+    active: Boolean
+  Subject:
+    user_id: id foreign:users.id
+    name: Varchar
+    color: Varchar
+  Schedule:
+    course_id: id foreign:course.id
+    subject_id: id foreign:subject.id
+    time_start: DateTime
+    time_end: DateTime
+    active: Boolean
+  Enrollment:
+    course_id: id foreign:course.id
+    user_id: id foreign:user.id
+    status: Integer
+    active: Boolean
+  CourseSubject:
+    course_id: id foreign:course.id
+    subject_id: id foreign:subject.id
+
+controllers:
+  Course:
+    index:
+      query: all
+      render: course.index with:courses
+    create:
+      render: course.create
+    store:
+      validate: name, description, date_start, date_end, active
+      save: course
+      fire: NewCourse with:course
+      flash: course.name
+      redirect: course.index
+    show:
+      query: all:courses
+      render: course.show with:course
+    edit:
+      render: course.edit with:course
+    update:
+      validate: course
+      update: course
+      flash: course.id
+      redirect: course.index
+    destroy:
+      delete: course
+      redirect: course.index
+  Subject:
+    index:
+      query: all
+      render: subject.index with:subjects
+    create:
+      render: subject.create
+    store:
+      validate: user_id, name, color
+      save: subject
+      fire: NewSubject with:subject
+      flash: subject.name
+      redirect: subject.index
+    show:
+      query: all:subjects
+      render: subject.show with:subject
+    edit:
+      render: subject.edit with:subject
+    update:
+      validate: subject
+      update: subject
+      flash: subject.id
+      redirect: subject.index
+    destroy:
+      delete: subject
+      redirect: subject.index
+  Schedule:
+    index:
+      query: all
+      render: schedule.index with:schedules
+    create:
+      render: schedule.create
+    store:
+      validate: course_id, subject_id, time_start, time_end, active
+      save: schedule
+      fire: NewSchedule with:schedule
+      flash: schedule.id
+      redirect: schedule.index
+    show:
+      query: all:schedules
+      render: schedule.show with:schedule
+    edit:
+      render: schedule.edit with:schedule
+    update:
+      validate: schedule
+      update: schedule
+      flash: schedule.id
+      redirect: schedule.index
+    destroy:
+      delete: schedule
+      redirect: schedule.index
+  Enrollment:
+    index:
+      query: all
+      render: enrollment.index with:enrollments
+    create:
+      render: enrollment.create
+    store:
+      validate: course_id, user_id, status, active
+      save: enrollment
+      fire: NewEnrollment with:enrollment
+      flash: enrollment.id
+      redirect: enrollment.index
+    show:
+      query: all:enrollments
+      render: enrollment.show with:enrollment
+    edit:
+      render: enrollment.edit with:enrollment
+    update:
+      validate: enrollment
+      update: enrollment
+      flash: enrollment.id
+      redirect: enrollment.index
+    destroy:
+      delete: enrollment
+      redirect: enrollment.index
+  CourseSubject:
+    index:
+      query: all
+      render: courseSubject.index with:courseSubjects
+    create:
+      render: courseSubject.create
+    store:
+      validate: course_id, subject_id
+      save: courseSubject
+      fire: NewCourseSubject with:courseSubject
+      flash: courseSubject.id
+      redirect: course-subject.index
+    show:
+      query: all:courseSubjects
+      render: courseSubject.show with:courseSubject
+    edit:
+      render: courseSubject.edit with:courseSubject
+    update:
+      validate: courseSubject
+      update: courseSubject
+      flash: courseSubject.id
+      redirect: course-subject.index
+    destroy:
+      delete: courseSubject
+      redirect: course-subject.index

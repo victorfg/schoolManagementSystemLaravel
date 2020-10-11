@@ -1,0 +1,38 @@
+created:
+    - app/Http/Controllers/CourseController.php
+    - app/Http/Controllers/SubjectController.php
+    - app/Http/Controllers/ScheduleController.php
+    - app/Http/Controllers/EnrollmentController.php
+    - app/Http/Controllers/CourseSubjectController.php
+    - database/factories/CourseFactory.php
+    - database/factories/SubjectFactory.php
+    - database/factories/ScheduleFactory.php
+    - database/factories/EnrollmentFactory.php
+    - database/factories/CourseSubjectFactory.php
+    - database/migrations/2020_10_11_130851_create_courses_table.php
+    - database/migrations/2020_10_11_130852_create_subjects_table.php
+    - database/migrations/2020_10_11_130853_create_schedules_table.php
+    - database/migrations/2020_10_11_130854_create_enrollments_table.php
+    - database/migrations/2020_10_11_130855_create_course_subjects_table.php
+    - app/Models/Course.php
+    - app/Models/Subject.php
+    - app/Models/Schedule.php
+    - app/Models/Enrollment.php
+    - app/Models/CourseSubject.php
+    - tests/Feature/Http/Controllers/CourseControllerTest.php
+    - tests/Feature/Http/Controllers/SubjectControllerTest.php
+    - tests/Feature/Http/Controllers/ScheduleControllerTest.php
+    - tests/Feature/Http/Controllers/EnrollmentControllerTest.php
+    - tests/Feature/Http/Controllers/CourseSubjectControllerTest.php
+    - app/Events/NewCourseSubject.php
+updated:
+    - routes/web.php
+models:
+    Models\Course: { name: string, description: string, date_start: datetime, date_end: datetime, active: boolean }
+    Models\Subject: { user_id: 'biginteger unsigned', name: string, color: string }
+    Models\User: { name: string, surname: 'string default:', telephone: 'string default:', nif: 'string default:', email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable', type: 'integer default:3' }
+    Course: { name: Varchar, description: Varchar, date_start: DateTime, date_end: DateTime, active: Boolean }
+    Subject: { user_id: 'id foreign:users.id', name: Varchar, color: Varchar }
+    Schedule: { course_id: 'id foreign:course.id', subject_id: 'id foreign:subject.id', time_start: DateTime, time_end: DateTime, active: Boolean }
+    Enrollment: { course_id: 'id foreign:course.id', user_id: 'id foreign:user.id', status: Integer, active: Boolean }
+    CourseSubject: { course_id: 'id foreign:course.id', subject_id: 'id foreign:subject.id' }
