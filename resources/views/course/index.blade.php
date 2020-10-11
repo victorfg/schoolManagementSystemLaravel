@@ -1,7 +1,7 @@
-{{--
+
     @extends('layouts.app')
 
     @section('content')
-        course.index template
+        {{$courses}}
     @endsection
---}}
+

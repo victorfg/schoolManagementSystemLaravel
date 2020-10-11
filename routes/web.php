@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseSubjectController;
+use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
@@ -39,4 +42,11 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::resource('course', CourseController::class);
+
 Route::resource('subject', SubjectController::class);
+
+Route::resource('schedule', ScheduleController::class);
+
+Route::resource('enrollment', EnrollmentController::class);
+
+Route::resource('course-subject', CourseSubjectController::class);
