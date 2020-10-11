@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125040_create_courses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125041_create_subjects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125042_create_schedules_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125043_create_enrollments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125044_create_course_subjects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/EnrollmentControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/EnrollmentControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/ScheduleControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/ScheduleControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
       <server host="p6producto3.test" id="3bb08f89-29dd-4f71-8022-77ae93bba135" name="p6producto3.test" port="443" use_path_mappings="true">
@@ -143,6 +150,13 @@
       <path value="$PROJECT_DIR$/vendor/jeroennoten/laravel-adminlte" />
       <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/laravel-shift/blueprint" />
+      <path value="$PROJECT_DIR$/vendor/laravel-shift/faker-registry" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/jasonmccreary/laravel-test-assertions" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hT1ikO9wyRrRSmuamsXoG6oYmN" />
@@ -163,15 +177,35 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects">
+    <configuration name="Controllers" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CourseControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\CourseControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CourseSubjectControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\CourseSubjectControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CourseSubjectControllerTest.index_displays_view" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\CourseSubjectControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" method="index_displays_view" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CourseSubjectControllerTest.store_saves_and_redirects" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\CourseSubjectControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" method="store_saves_and_redirects" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -181,6 +215,15 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects" />
+        <item itemvalue="PHPUnit.CourseSubjectControllerTest" />
+        <item itemvalue="PHPUnit.Controllers" />
+        <item itemvalue="PHPUnit.CourseSubjectControllerTest.index_displays_view" />
+        <item itemvalue="PHPUnit.CourseControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -198,6 +241,7 @@
       <workItem from="1600895522242" duration="2584000" />
       <workItem from="1601133702943" duration="6635000" />
       <workItem from="1601141567247" duration="2014000" />
+      <workItem from="1602416280989" duration="5421000" />
     </task>
     <servers />
   </component>
@@ -225,54 +269,58 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601143425053" />
-    <state width="1822" height="352" key="GridCell.Tab.0.bottom" timestamp="1600512495018">
+    <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate" timestamp="1602421702598">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.0.center" timestamp="1600512495017">
+    <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421702598" />
+    <state width="1822" height="304" key="GridCell.Tab.0.bottom" timestamp="1602421691738">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
-    <state width="1822" height="352" key="GridCell.Tab.0.left" timestamp="1600512495017">
+    <state width="1822" height="304" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
+    <state width="1822" height="304" key="GridCell.Tab.0.center" timestamp="1602421691738">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
-    <state width="1822" height="352" key="GridCell.Tab.0.right" timestamp="1600512495017">
+    <state width="1822" height="304" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
+    <state width="1822" height="304" key="GridCell.Tab.0.left" timestamp="1602421691738">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495017" />
-    <state width="1822" height="352" key="GridCell.Tab.1.bottom" timestamp="1600512495018">
+    <state width="1822" height="304" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
+    <state width="1822" height="304" key="GridCell.Tab.0.right" timestamp="1602421691738">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.1.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.1.center" timestamp="1600512495018">
+    <state width="1822" height="304" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
+    <state width="1822" height="413" key="GridCell.Tab.1.bottom" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.1.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.1.left" timestamp="1600512495018">
+    <state width="1822" height="413" key="GridCell.Tab.1.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.1.center" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.1.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.1.right" timestamp="1600512495018">
+    <state width="1822" height="413" key="GridCell.Tab.1.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.1.left" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.1.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495018" />
-    <state width="1822" height="352" key="GridCell.Tab.2.bottom" timestamp="1600512495019">
+    <state width="1822" height="413" key="GridCell.Tab.1.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.1.right" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.2.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495019" />
-    <state width="1822" height="352" key="GridCell.Tab.2.center" timestamp="1600512495019">
+    <state width="1822" height="413" key="GridCell.Tab.1.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.2.bottom" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.2.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495019" />
-    <state width="1822" height="352" key="GridCell.Tab.2.left" timestamp="1600512495019">
+    <state width="1822" height="413" key="GridCell.Tab.2.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.2.center" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.2.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495019" />
-    <state width="1822" height="352" key="GridCell.Tab.2.right" timestamp="1600512495019">
+    <state width="1822" height="413" key="GridCell.Tab.2.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.2.left" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="352" key="GridCell.Tab.2.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512495019" />
+    <state width="1822" height="413" key="GridCell.Tab.2.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state width="1822" height="413" key="GridCell.Tab.2.right" timestamp="1602421691701">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1822" height="413" key="GridCell.Tab.2.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
     <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog" timestamp="1600511053101">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -281,14 +329,18 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1789" y="175" width="1007" height="737" key="SettingsEditor/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512688240" />
+    <state width="933" height="540" key="XDebugger.FullValuePopup" timestamp="1602421077150">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="933" height="540" key="XDebugger.FullValuePopup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421077150" />
     <state x="1986" y="289" width="615" height="502" key="find.popup" timestamp="1601142705997">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1986" y="289" width="615" height="502" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601142705997" />
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1601140868982">
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602419792912">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601140868982" />
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602419792912" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -302,6 +354,11 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php</url>
           <line>17</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,19 +13,19 @@ class CreateSchedulesTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('schedules', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->biginteger('id_course')->unsigned();
-            $table->biginteger('id_subject')->unsigned();
-            $table->datetime('time_start');
-            $table->datetime('time_end');
+            $table->id();
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('subject_id')->constrained()->cascadeOnDelete();
+            $table->dateTime('time_start');
+            $table->dateTime('time_end');
             $table->boolean('active');
             $table->timestamps();
         });
-        Schema::table('schedules', function (Blueprint $table) {
-            $table->foreign('id_course')->references('id')->on('courses');
-            $table->foreign('id_subject')->references('id')->on('subjects');
-        });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

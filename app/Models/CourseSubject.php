@@ -8,11 +8,36 @@ use Illuminate\Database\Eloquent\Model;
 class CourseSubject extends Model
 {
     use HasFactory;
-    public function courses()
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'course_id',
+        'subject_id',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'course_id' => 'integer',
+        'subject_id' => 'integer',
+    ];
+
+
+    public function course()
     {
-        $this->belongsTo('courses');
+        return $this->belongsTo(\App\Models\Course::class);
     }
-    public function subjects(){
-        $this->belongsTo('subjects');
+
+    public function subject()
+    {
+        return $this->belongsTo(\App\Models\Subject::class);
     }
 }
