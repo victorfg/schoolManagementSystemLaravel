@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125040_create_courses_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125041_create_subjects_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125042_create_schedules_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125043_create_enrollments_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_125044_create_course_subjects_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/EnrollmentControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/EnrollmentControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/ScheduleControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/ScheduleControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/show.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +179,7 @@
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects">
+  <component name="RunManager" selected="PHPUnit.Controllers">
     <configuration name="Controllers" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" />
       <method v="2" />
@@ -217,9 +211,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.Controllers" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest" />
-        <item itemvalue="PHPUnit.Controllers" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest.index_displays_view" />
         <item itemvalue="PHPUnit.CourseControllerTest" />
       </list>
@@ -273,22 +267,22 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421702598" />
-    <state width="1822" height="304" key="GridCell.Tab.0.bottom" timestamp="1602421691738">
+    <state width="1822" height="248" key="GridCell.Tab.0.bottom" timestamp="1602432893613">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="304" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
-    <state width="1822" height="304" key="GridCell.Tab.0.center" timestamp="1602421691738">
+    <state width="1822" height="248" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
+    <state width="1822" height="248" key="GridCell.Tab.0.center" timestamp="1602432893613">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="304" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
-    <state width="1822" height="304" key="GridCell.Tab.0.left" timestamp="1602421691738">
+    <state width="1822" height="248" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
+    <state width="1822" height="248" key="GridCell.Tab.0.left" timestamp="1602432893613">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="304" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
-    <state width="1822" height="304" key="GridCell.Tab.0.right" timestamp="1602421691738">
+    <state width="1822" height="248" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
+    <state width="1822" height="248" key="GridCell.Tab.0.right" timestamp="1602432893613">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="304" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691738" />
+    <state width="1822" height="248" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
     <state width="1822" height="413" key="GridCell.Tab.1.bottom" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -337,10 +331,10 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1986" y="289" width="615" height="502" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601142705997" />
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602419792912">
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602422284789">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602419792912" />
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602422284789" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
