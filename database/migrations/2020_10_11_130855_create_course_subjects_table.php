@@ -13,16 +13,16 @@ class CreateCourseSubjectsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('course_subjects', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->biginteger('id_course')->unsigned();
-            $table->biginteger('id_subject')->unsigned();
+            $table->id();
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('subject_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
-        Schema::table('course_subjects', function (Blueprint $table) {
-            $table->foreign('id_course')->references('id')->on('courses');
-            $table->foreign('id_subject')->references('id')->on('subjects');
-        });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

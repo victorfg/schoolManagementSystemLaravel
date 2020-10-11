@@ -13,17 +13,18 @@ class CreateEnrollmentsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('enrollments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->biginteger('id_course')->unsigned();
-            $table->biginteger('id_student')->unsigned();
+            $table->id();
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->integer('status');
+            $table->boolean('active');
             $table->timestamps();
         });
-        Schema::table('enrollments', function (Blueprint $table) {
-            $table->foreign('id_course')->references('id')->on('courses');
-            $table->foreign('id_student')->references('id')->on('users');
-        });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
