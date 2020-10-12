@@ -11,7 +11,7 @@
     @endcan
     @can('canAdminUsers')
         <div class="item-option margin-right-15 cursor-pointer">
-            <a href="">Usuarios</a>
+            <a href="{{route('user.index')}}">Usuarios</a>
         </div>
     @endcan
     @can('canAdminEnrollments')

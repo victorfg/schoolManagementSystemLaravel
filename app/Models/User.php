@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\UserTypes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,5 +41,10 @@ class User extends Authenticatable
     public function enrollments()
     {
         return $this->hasmany('enrollments');
+    }
+
+    public function getTypeNameAttributte()
+    {
+        return UserTypes::getUserTypeById($this->type);
     }
 }

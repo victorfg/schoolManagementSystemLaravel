@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\user;
+use App\Helpers\UserTypes;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,8 +14,16 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::all();
-
+        $users = User::all()->map(function ($item) {
+            return [
+                'id' => $item->id,
+                'name' => $item->name,
+                'surname' => $item->surname,
+                'email' => $item->email,
+                'type' => $item->type,
+                'typeName' => UserTypes::getUserTypeById($item->type),
+            ];
+        });
         return view('user.index', compact('users'));
     }
 
@@ -25,7 +33,8 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        return view('user.create');
+        $userTypes = UserTypes::getUserTypes();
+        return view('user.create',compact('userTypes'));
     }
 
     /**
@@ -58,7 +67,8 @@ class UserController extends Controller
      */
     public function edit(Request $request, User $user)
     {
-        return view('user.edit', compact('user'));
+        $userTypes = UserTypes::getUserTypes();
+        return view('user.edit', compact('user','userTypes'));
     }
 
     /**
@@ -68,7 +78,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update([]);
+        $user->update($request->all());
 
         $request->session()->flash('user.id', $user->id);
 
