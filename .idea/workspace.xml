@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/WeekDays.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/calendar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/calendar/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ScheduleStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ScheduleStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ScheduleUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ScheduleUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_121533_add_days_column_to_enrollments_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/calendar/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
       <server host="p6producto3.test" id="3bb08f89-29dd-4f71-8022-77ae93bba135" name="p6producto3.test" port="443">
@@ -172,22 +169,23 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/calendar" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests" />
-      <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/calendar" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.DEBUG">
     <configuration name="Controllers" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" />
       <method v="2" />
@@ -208,7 +206,7 @@
       <TestRunner class="Tests\Feature\Http\Controllers\CourseSubjectControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php" method="store_saves_and_redirects" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <configuration name="DEBUG" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
@@ -217,6 +215,14 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="PHPUnit.DEBUG" />
+      <item itemvalue="PHPUnit.Controllers" />
+      <item itemvalue="PHPUnit.CourseControllerTest" />
+      <item itemvalue="PHPUnit.CourseSubjectControllerTest" />
+      <item itemvalue="PHPUnit.CourseSubjectControllerTest.index_displays_view" />
+      <item itemvalue="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CourseControllerTest" />
@@ -245,6 +251,7 @@
       <workItem from="1601141567247" duration="2014000" />
       <workItem from="1602416280989" duration="5421000" />
       <workItem from="1602491871081" duration="21297000" />
+      <workItem from="1602520171572" duration="5365000" />
     </task>
     <servers />
   </component>
@@ -252,18 +259,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters" timestamp="1602442479167">
+    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters" timestamp="1602524655113">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442479167" />
+    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602524655113" />
     <state x="1618" y="224" width="824" height="691" key="#Servers" timestamp="1600512732378">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1618" y="224" width="824" height="691" key="#Servers/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512732378" />
-    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602442398712">
+    <state x="1876" y="222" width="824" height="691" key="#Test_Frameworks" timestamp="1602524650948">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442398712" />
+    <state x="1876" y="222" width="824" height="691" key="#Test_Frameworks/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602524650948" />
+    <state x="1751" y="198" width="1084" height="756" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602524689184">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1751" y="198" width="1084" height="756" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602524689184" />
     <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600897477050">
       <screen x="0" y="27" width="1866" height="1053" />
     </state>
@@ -335,10 +346,10 @@
     </state>
     <state x="528" y="476" width="248" height="154" key="NewPhpFileDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602514738400" />
     <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600511053101" />
-    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor" timestamp="1602442480332">
+    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor" timestamp="1602524860442">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442480332" />
+    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602524860442" />
     <state width="933" height="540" key="XDebugger.FullValuePopup" timestamp="1602421077150">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -352,10 +363,10 @@
       <screen x="0" y="145" width="1360" height="768" />
     </state>
     <state x="597" y="252" key="run.anything.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602514836995" />
-    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602505767377">
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602521018097">
       <screen x="0" y="145" width="1360" height="768" />
     </state>
-    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602505767377" />
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602521018097" />
     <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602493514210" />
   </component>
   <component name="XDebuggerManager">
@@ -385,6 +396,16 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php</url>
           <line>31</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

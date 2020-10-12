@@ -3,6 +3,7 @@
 
     @section('content')
         @include('menu.app')
+        <link rel="stylesheet" href="css/style.css">
         <div class="cd-schedule margin-top-lg margin-bottom-lg js-cd-schedule">
             <form method="get" style="margin-left: 61px;margin-bottom: 5px;">
                 <input type="week" id="lweek" name="lweek" value="">
@@ -153,4 +154,6 @@
             <div class="cd-schedule__cover-layer"></div>
         </div>
     @endsection
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
 
