@@ -25,13 +25,34 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('canAccessToAdminPage', function ($user) {
+        Gate::define('canAccessToWeeks', function ($user) {
+            return $user->type==3;
+        });
+        Gate::define('canAdminSubjects', function ($user) {
             return $user->type==1;
         });
-        Gate::define('canAccessToTeacherPage', function ($user) {
-            return $user->type==2;
+        Gate::define('canAdminUsers', function ($user) {
+            return $user->type==1;
         });
-        Gate::define('canAccessToStudentPage', function ($user) {
+        Gate::define('canAdminEnrollments', function ($user) {
+            return $user->type==1;
+        });
+        Gate::define('canShowCourses', function ($user) {
+            return $user->type==3 || $user->type==2 ;
+        });
+        Gate::define('canModifyCourses', function ($user) {
+            return $user->type==3;
+        });
+        Gate::define('canShowSchedules', function ($user) {
+            return $user->type==3 || $user->type==2 ;
+        });
+        Gate::define('canModifySchedules', function ($user) {
+            return $user->type==2 || $user->type==2 ;
+        });
+        Gate::define('canShowCoursesSubjects', function ($user) {
+            return $user->type==3 || $user->type==2 ;
+        });
+        Gate::define('canModifyCoursesSubjects', function ($user) {
             return $user->type==3;
         });
     }
