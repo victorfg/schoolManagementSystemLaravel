@@ -67,9 +67,11 @@ class CourseSubjectController extends Controller
      * @param \App\Models\CourseSubject $courseSubject
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Course $course, CourseSubject $courseSubject)
+    public function edit(Request $request, Course $course,CourseSubject $courseSubject)
     {
-        return view('courseSubject.edit', compact('course','courseSubject'));
+        $courses = Course::all()->pluck('name','id');
+        $subjects =  Subject::all()->pluck('name','id');
+        return view('courseSubject.edit', compact('course','courseSubject','courses','subjects'));
     }
 
     /**
@@ -83,7 +85,7 @@ class CourseSubjectController extends Controller
 
         $request->session()->flash('courseSubject.id', $courseSubject->id);
 
-        return redirect()->route('subjects.index', compact('course'));
+        return redirect()->route('courseSubject.index', compact('course'));
     }
 
     /**
@@ -96,6 +98,6 @@ class CourseSubjectController extends Controller
         $courseSubject = CourseSubject::find($courseSubjectId);
         $courseSubject->delete();
 
-        return redirect()->route('subjects.index', compact('course'));
+        return redirect()->route('courseSubject.index', compact('course'));
     }
 }

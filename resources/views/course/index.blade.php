@@ -31,7 +31,7 @@
                             <td>{{$course->date_end}}</td>
                             <td>{{$course->active}}</td>
                             <td><a href="{{route('course.edit', $course->id)}}" type="button" class="btn btn-primary">Modificar</a></td>
-                            <td><a href="{{route('subjects.index', $course->id)}}" type="button" class="btn btn-success">Asignaturas</a></td>
+                            <td><a href="{{route('courseSubject.index', $course->id)}}" type="button" class="btn btn-success">Asignaturas</a></td>
                             <td>
                                 {{ Form::open(array('url' => route('course.destroy', $course->id))) }}
                                     @method('DELETE')

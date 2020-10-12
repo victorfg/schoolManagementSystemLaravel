@@ -46,6 +46,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('subject', SubjectController::class)->only($crudMethods);
     Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only($crudMethods);
     Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
-    Route::resource('course/{course}/subjects', CourseSubjectController::class)->only($crudMethods);
+    Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only($crudMethods);
     Route::resource('calendar', CalendarController::class)->only('index');
 });
