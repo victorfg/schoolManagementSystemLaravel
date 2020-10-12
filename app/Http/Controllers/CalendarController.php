@@ -25,6 +25,8 @@ class CalendarController extends Controller
      */
     public function index(Request $request, Course $course, Subject $subject)
     {
+        $days = WeekDays::getDayKeys();
+        $daysNames = WeekDays::getDayNames();
         $week = $request->input('lweek');
         if(empty($week)) {
             $week = date('Y').'-W'.date('W');
@@ -41,8 +43,8 @@ class CalendarController extends Controller
         $rows = $this->getCalendarRows($week_start_date,$week_end_date);
 
         $calendar = $this->formatCalendarRows($rows,$year,$week);
-
-        return view('calendar.index', compact('calendar'));
+        //dd($calendar);
+        return view('calendar.index',compact('calendar','days','daysNames'));
     }
     private function getCalendarRows($week_start_date,$week_end_date)
     {
@@ -69,38 +71,37 @@ class CalendarController extends Controller
     {
         try {
             $dayNumber = ['m'=>1,'t'=>2,'w'=>3,'r'=>4,'f'=>5,'s'=>6,'u'=>7];
-            $calendar = [];
+            $calendar = ['m'=>[],'t'=>[],'w'=>[],'r'=>[],'f'=>[],'s'=>[],'u'=>[]];
+
 
             foreach($rows as $row){
-                if(empty($row)){
-                    continue;
-                }
-                $days = explode("|",$row->days);
-                dd($row);
+                $days = explode("|",$row->scheduled_days);
                 foreach($days as $day){
-                    $gendate = new DateTime();
+                    if($day==''){
+                        continue;
+                    }
+                    $gendate = Carbon::now();
                     $gendate->setISODate($year,$week,$dayNumber[$day]); //year , week num , day
-                    $gendate->setTime(0, 0,0,0);
-                    $course_start_date = DateTime::createFromFormat('Y-m-d', $row['date_start']);
-                    $course_start_date->setTime(0, 0,0,0);
-                    $course_end_date = DateTime::createFromFormat('Y-m-d', $row['date_end']);
-                    $course_end_date->setTime(0, 0,0,0);
-                    $data = null;
-                    $curseInProgress = $gendate>=$course_start_date & $gendate<=$course_end_date;
+                    $course_start_date = Carbon::parse($row->date_start)->startOfDay();
+                    $course_end_date = Carbon::parse($row->date_end)->endOfDay();
+
+                    $curseInProgress = true;//$gendate>=$course_start_date & $gendate<=$course_end_date;
                     if($curseInProgress){
+
                         $data = [
-                            'subject_id'=>$row['id_subject'],
-                            'subject_name'=>$row['subject_name'],
-                            'subject_color'=>$row['subject_color'],
-                            'course_name'=>$row['course_name'],
-                            'time_start'=>$row['time_start'],
-                            'time_end'=>$row['time_end'],
+                            'subject_id'=>$row->subject_id,
+                            'subject_name'=>$row->subject_name,
+                            'subject_color'=>$row->subject_color,
+                            'course_name'=>$row->course_name,
+                            'time_start'=>Carbon::parse($row->time_start)->format('H:i'),
+                            'time_end'=>Carbon::parse($row->time_end)->format('H:i'),
                         ];
                     }
                     $calendar[$day][] = [
                         'date'=>$gendate->format('d-m-Y'),
                         'data'=>$data
                     ];
+
                 }
             }
             return $calendar;

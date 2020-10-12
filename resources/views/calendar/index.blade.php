@@ -11,125 +11,29 @@
             </form>
             <div class="cd-schedule__events">
                 <ul>
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
+                    @foreach($days as $key=>$day)
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info">
+                                <ul>
+                                    <li><span>{{$daysNames[$key]}}</span></li>
+                                    <span style="font-size:10px">{{$calendar[$day][0]['date']??''}}</span>
+                                </ul>
+                            </div>
                             <ul>
-                                <li><span>Lunes</span></li>
-                                <span style="font-size:10px"></span>
+                                @foreach($calendar[$day] as $event)
+                                    @if(is_null($event['data']))
+                                        @continue;
+                                    @endif
+                                    <li class="cd-schedule__event">
+                                        <a style="background-color: {{$event['data']['subject_color']}}" data-start="{{$event['data']['time_start']}}" data-end="{{$event['data']['time_end']}}" data-content="event-abs-circuit" data-event="event-1" >
+                                            <p style="color:white;font-size:10px;">{{$event['data']['course_name']}}</p>
+                                            <em class="cd-schedule__name">{{$event['data']['subject_name']}}</em>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Martes</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Miercoles</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-2" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Jueves</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Viernes</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Sábado</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="cd-schedule__group">
-                        <div class="cd-schedule__top-info">
-                            <ul>
-                                <li><span>Domingo</span></li>
-                                <span style="font-size:10px"></span>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li class="cd-schedule__event">
-                                <a style="" data-start="" data-end="" data-content="event-abs-circuit" data-event="event-1" >
-                                    <p style="color:white;font-size:10px;"></p>
-                                    <em class="cd-schedule__name"></em>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 
