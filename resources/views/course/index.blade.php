@@ -5,7 +5,9 @@
         @include('menu.app')
         <div class="container">
             <h2 class="margin-top-20">Cursos</h2>
+            @can('canModifyCourses')
             <a href="{{route('course.create')}}" type="button" class="btn btn-primary margin-top-20">Crear curso</a>
+            @endcan
             <div class="table-responsive margin-top-20">
                 <table class="table">
                     <thead>
