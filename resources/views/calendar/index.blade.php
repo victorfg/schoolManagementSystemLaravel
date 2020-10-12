@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <div class="cd-schedule margin-top-lg margin-bottom-lg js-cd-schedule">
             <form method="get" style="margin-left: 61px;margin-bottom: 5px;">
-                <input type="week" id="lweek" name="lweek" value="">
+                <input type="week" id="lweek" name="lweek" value="{{$weekFilter}}">
                 <input type="submit" value="Filtrar">
             </form>
             <div class="cd-schedule__events">

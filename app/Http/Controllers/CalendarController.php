@@ -28,6 +28,7 @@ class CalendarController extends Controller
         $days = WeekDays::getDayKeys();
         $daysNames = WeekDays::getDayNames();
         $week = $request->input('lweek');
+        $weekFilter = $week;
         if(empty($week)) {
             $week = date('Y').'-W'.date('W');
         }
@@ -42,7 +43,7 @@ class CalendarController extends Controller
 
         $calendar = $this->formatCalendarRows($rows,$year,$week);
         //dd($calendar);
-        return view('calendar.index',compact('calendar','days','daysNames'));
+        return view('calendar.index',compact('calendar','days','daysNames','weekFilter'));
     }
     private function getCalendarRows($week_start_date,$week_end_date)
     {

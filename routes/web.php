@@ -49,3 +49,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only($crudMethods);
     Route::resource('calendar', CalendarController::class)->only('index');
 });
+
+
+Route::resource('users', 'UsersController')->except('edit', 'destroy');
+Route::get('users/delete', 'UsersController@delete');
+
+
+Route::resource('users', 'UsersController')->except('edit', 'destroy');
+Route::get('users/delete', 'UsersController@delete');
+
+Route::resource('user-password', 'UserPasswordController')->only('update');
