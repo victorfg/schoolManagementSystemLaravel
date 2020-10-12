@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewSubject;
+use App\Helpers\UserTypes;
 use App\Http\Requests\SubjectStoreRequest;
 use App\Http\Requests\SubjectUpdateRequest;
 use App\Models\Subject;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
 {
+    protected $userTypes;
+    /**
+     * SubjectController constructor.
+     */
+    public function __construct()
+    {
+        $this->userTypes = new UserTypes();
+    }
+
     /**
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
@@ -27,7 +38,9 @@ class SubjectController extends Controller
      */
     public function create(Request $request)
     {
-        return view('subject.create');
+        $teachers = User::where('type',UserTypes::getIdUserTypesByName('teacher'))->get()->pluck('name','id');
+        $colors = json_encode(config('colors'));
+        return view('subject.create', compact('teachers', 'colors'));
     }
 
     /**
@@ -64,7 +77,9 @@ class SubjectController extends Controller
      */
     public function edit(Request $request, Subject $subject)
     {
-        return view('subject.edit', compact('subject'));
+        $teachers = User::where('type',$this->userTypes->getIdUserTypesByName('teacher'))->get()->pluck('name','id');
+        $colors = json_encode(config('colors'));
+        return view('subject.edit', compact('subject','teachers','colors'));
     }
 
     /**

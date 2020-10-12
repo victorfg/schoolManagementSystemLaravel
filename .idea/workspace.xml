@@ -2,12 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Helpers/UserTypes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/colors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/coursesubject/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CourseStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CourseStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CourseUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CourseUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EnrollmentStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EnrollmentStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EnrollmentUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EnrollmentUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addcourse.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addsubjectincourse.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addtimetabletosubject.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/editcourse.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/editsubjectincourse.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/edittimetabletosubject.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewallcourses.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewcoursessubjects.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewtimetablesubjects.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/addmatriculate.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/editmatriculate.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/viewallmatriculas.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/addsubject.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/editsubject.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/viewallsubjects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subject/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subject/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subject/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +63,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
-      <server host="p6producto3.test" id="3bb08f89-29dd-4f71-8022-77ae93bba135" name="p6producto3.test" port="443" use_path_mappings="true">
+      <server host="p6producto3.test" id="3bb08f89-29dd-4f71-8022-77ae93bba135" name="p6producto3.test" port="443">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/home/manuel/.config/composer/vendor/cpriego/valet-linux" />
         </path_mappings>
@@ -162,16 +204,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -179,7 +223,7 @@
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.Controllers">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="Controllers" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Http/Controllers" />
       <method v="2" />
@@ -211,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CourseControllerTest" />
         <item itemvalue="PHPUnit.Controllers" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest.store_saves_and_redirects" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest" />
         <item itemvalue="PHPUnit.CourseSubjectControllerTest.index_displays_view" />
-        <item itemvalue="PHPUnit.CourseControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -236,6 +280,7 @@
       <workItem from="1601133702943" duration="6635000" />
       <workItem from="1601141567247" duration="2014000" />
       <workItem from="1602416280989" duration="5421000" />
+      <workItem from="1602491871081" duration="12324000" />
     </task>
     <servers />
   </component>
@@ -243,46 +288,47 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters" timestamp="1600512264827">
+    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters" timestamp="1602442479167">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512264827" />
+    <state x="1875" y="201" width="824" height="691" key="#CLI_Interpreters/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442479167" />
     <state x="1618" y="224" width="824" height="691" key="#Servers" timestamp="1600512732378">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="1618" y="224" width="824" height="691" key="#Servers/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512732378" />
-    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600512288765">
+    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602442398712">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512288765" />
+    <state x="1751" y="198" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442398712" />
     <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600897477050">
       <screen x="0" y="27" width="1866" height="1053" />
     </state>
     <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1866.1053@0.27.1866.1053" timestamp="1600897477050" />
-    <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601143425053">
-      <screen x="1360" y="0" width="1920" height="1080" />
+    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602501807612">
+      <screen x="0" y="145" width="1360" height="768" />
     </state>
+    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602501807612" />
     <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601143425053" />
     <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate" timestamp="1602421702598">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421702598" />
-    <state width="1822" height="248" key="GridCell.Tab.0.bottom" timestamp="1602432893613">
+    <state width="1822" height="237" key="GridCell.Tab.0.bottom" timestamp="1602442865045">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="248" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
-    <state width="1822" height="248" key="GridCell.Tab.0.center" timestamp="1602432893613">
+    <state width="1822" height="237" key="GridCell.Tab.0.bottom/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442865045" />
+    <state width="1822" height="237" key="GridCell.Tab.0.center" timestamp="1602442865045">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="248" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
-    <state width="1822" height="248" key="GridCell.Tab.0.left" timestamp="1602432893613">
+    <state width="1822" height="237" key="GridCell.Tab.0.center/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442865045" />
+    <state width="1822" height="237" key="GridCell.Tab.0.left" timestamp="1602442865045">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="248" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
-    <state width="1822" height="248" key="GridCell.Tab.0.right" timestamp="1602432893613">
+    <state width="1822" height="237" key="GridCell.Tab.0.left/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442865045" />
+    <state width="1822" height="237" key="GridCell.Tab.0.right" timestamp="1602442865045">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="1822" height="248" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602432893613" />
+    <state width="1822" height="237" key="GridCell.Tab.0.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442865045" />
     <state width="1822" height="413" key="GridCell.Tab.1.bottom" timestamp="1602421691701">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -315,26 +361,32 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1822" height="413" key="GridCell.Tab.2.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
+    <state x="2044" y="266" width="487" height="555" key="NewPhpClassDialog" timestamp="1602435421085">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2044" y="266" width="487" height="555" key="NewPhpClassDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602435421085" />
     <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog" timestamp="1600511053101">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600511053101" />
-    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor" timestamp="1600512688240">
+    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor" timestamp="1602442480332">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600512688240" />
+    <state x="1789" y="175" width="1007" height="737" key="SettingsEditor/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602442480332" />
     <state width="933" height="540" key="XDebugger.FullValuePopup" timestamp="1602421077150">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="933" height="540" key="XDebugger.FullValuePopup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421077150" />
-    <state x="1986" y="289" width="615" height="502" key="find.popup" timestamp="1601142705997">
-      <screen x="1360" y="0" width="1920" height="1080" />
+    <state x="443" y="351" width="632" height="516" key="find.popup" timestamp="1602499968012">
+      <screen x="0" y="145" width="1360" height="768" />
     </state>
-    <state x="1986" y="289" width="615" height="502" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601142705997" />
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602422284789">
-      <screen x="1360" y="0" width="1920" height="1080" />
+    <state x="443" y="351" width="632" height="516" key="find.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602499968012" />
+    <state x="1986" y="289" width="892" height="725" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602435873893" />
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602503530218">
+      <screen x="0" y="145" width="1360" height="768" />
     </state>
-    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602422284789" />
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602503530218" />
+    <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602493514210" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -353,6 +405,16 @@
           <url>file://$PROJECT_DIR$/tests/Feature/Http/Controllers/CourseSubjectControllerTest.php</url>
           <line>85</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php</url>
+          <line>40</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

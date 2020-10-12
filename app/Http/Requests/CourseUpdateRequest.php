@@ -28,7 +28,21 @@ class CourseUpdateRequest extends FormRequest
             'description' => ['required', 'string'],
             'date_start' => ['required'],
             'date_end' => ['required'],
-            'active' => ['required'],
+            'active' => [],
         ];
+    }
+    public function validated()
+    {
+        $item = $this->validator->validated();
+
+        if(empty($item['active'])){
+            $item['active'] = false;
+        }
+
+        if(!is_bool($item['active'])){
+            $item['active'] = $item['active'] == 'on';
+        }
+
+        return $item;
     }
 }

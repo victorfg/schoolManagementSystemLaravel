@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewEnrollment;
+use App\Helpers\UserTypes;
 use App\Http\Requests\EnrollmentStoreRequest;
 use App\Http\Requests\EnrollmentUpdateRequest;
+use App\Models\Course;
 use App\Models\Enrollment;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EnrollmentController extends Controller
@@ -27,7 +30,10 @@ class EnrollmentController extends Controller
      */
     public function create(Request $request)
     {
-        return view('enrollment.create');
+        $courses = Course::all()->pluck('name','id');
+        $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
+            ->pluck('name','id');
+        return view('enrollment.create', compact('courses','students'));
     }
 
     /**
@@ -64,7 +70,10 @@ class EnrollmentController extends Controller
      */
     public function edit(Request $request, Enrollment $enrollment)
     {
-        return view('enrollment.edit', compact('enrollment'));
+        $courses = Course::all()->pluck('name','id');
+        $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
+            ->pluck('name','id');
+        return view('enrollment.edit', compact('enrollment'), compact('courses','students'));
     }
 
     /**

@@ -41,12 +41,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');
 });
 
-Route::resource('course', CourseController::class);
+$crudMethods = ['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy'];
 
-Route::resource('subject', SubjectController::class);
+Route::resource('course', CourseController::class)->only($crudMethods);;
 
-Route::resource('schedule', ScheduleController::class);
+Route::resource('subject', SubjectController::class)->only($crudMethods);
 
-Route::resource('enrollment', EnrollmentController::class);
+Route::resource('course/{course}/subjects/{subject}/schedule', ScheduleController::class)->only($crudMethods);
 
-Route::resource('course-subject', CourseSubjectController::class);
+Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
+
+Route::resource('course/{course}/subjects', CourseSubjectController::class)->only($crudMethods);

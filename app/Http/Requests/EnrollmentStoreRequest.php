@@ -27,7 +27,20 @@ class EnrollmentStoreRequest extends FormRequest
             'course_id' => ['required', 'integer', 'exists:courses,id'],
             'user_id' => ['required', 'integer', 'exists:users,id'],
             'status' => ['required', 'integer'],
-            'active' => ['required'],
         ];
+    }
+    public function validated()
+    {
+        $item = $this->validator->validated();
+
+        if(empty($item['active'])){
+            $item['active'] = false;
+        }
+
+        if(!is_bool($item['active'])){
+            $item['active'] = $item['active'] == 'on';
+        }
+
+        return $item;
     }
 }

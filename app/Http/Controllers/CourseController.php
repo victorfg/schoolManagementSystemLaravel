@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewCourse;
+use App\Http\Requests\CourseEditRequest;
 use App\Http\Requests\CourseStoreRequest;
 use App\Http\Requests\CourseUpdateRequest;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class CourseController extends Controller
 {
@@ -64,6 +66,16 @@ class CourseController extends Controller
      */
     public function edit(Request $request, Course $course)
     {
+        $course = $course->toArray();
+        $course['active'] = $course['active']?'on':'';
+        $course['date_start'] = Carbon::parse($course['date_start'])->format('Y-m-d');
+        $course['date_end'] = Carbon::parse($course['date_end'])->format('Y-m-d');
+        $course = (object)$course;
+//        $course->fill([
+//            'active' =>$course->active?'on':'',
+//            'date_start' => Carbon::parse($course->date_start)->format('Y-m-d'),
+//            'date_end' => Carbon::parse($course->date_end)->format('Y-m-d'),
+//        ]);
         return view('course.edit', compact('course'));
     }
 
