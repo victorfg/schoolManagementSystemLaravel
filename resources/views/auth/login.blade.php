@@ -66,6 +66,10 @@
                     </form>
                 </div>
             </div>
+            <div class="margin-top-20">For testing purposes</div>
+            <div class="margin-top-20">admin: admin@gmail.com || 123  </div>
+            <div class="margin-top-20">teacher: teacher@gmail.com || 123  </div>
+            <div class="margin-top-20">student: student@gmail.com || 123</div>
         </div>
     </div>
 </div>
