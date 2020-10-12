@@ -35,10 +35,8 @@ class CalendarController extends Controller
         $year = explode('-',$week)[0];
         $week = str_replace('W','',explode('-',$week)[1]);
 
-        $week_start_date = (new DateTime())->setISODate($year, $week);
-        $week_start_date->setTime(0, 0,0,0);
-        $week_end_date = (new DateTime())->setISODate($year, $week,7);
-        $week_end_date->setTime(0, 0,0,0);
+        $week_start_date = Carbon::now()->setISODate($year,$week,1)->startOfDay();
+        $week_end_date = Carbon::now()->setISODate($year,$week,7)->startOfDay();
 
         $rows = $this->getCalendarRows($week_start_date,$week_end_date);
 
@@ -63,7 +61,18 @@ class CalendarController extends Controller
             })
             ->join('enrollments','enrollments.course_id', '=','courses.id')
             ->where('courses.active',1)
-            ->where('enrollments.user_id',$user->id);
+            ->where('enrollments.user_id',$user->id)
+            ->where(function ($query) use($week_start_date,$week_end_date){
+                $query
+                    ->where('courses.date_start', '<=', $week_start_date->format('Y-m-d'))
+                    ->Where('courses.date_end', '>=', $week_start_date->format('Y-m-d'))
+                    ->OrWhere('courses.date_start', '<=', $week_end_date->format('Y-m-d'))
+                    ->Where('courses.date_end', '>=', $week_end_date->format('Y-m-d'))
+                    ->OrWhere('courses.date_start', '>=', $week_start_date->format('Y-m-d'))
+                    ->Where('courses.date_start', '<=', $week_end_date->format('Y-m-d'))
+                    ->OrWhere('courses.date_end', '>=', $week_start_date->format('Y-m-d'))
+                    ->Where('courses.date_end', '<=', $week_end_date->format('Y-m-d'));
+            });
         //return [$query->toSql(),$query->getBindings()];
         return $query->get();
     }
