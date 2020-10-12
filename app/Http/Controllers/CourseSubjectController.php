@@ -47,7 +47,7 @@ class CourseSubjectController extends Controller
 
         $request->session()->flash('courseSubject.id', $courseSubject->id);
 
-        return redirect()->route('subjects.index', compact('course'));
+        return redirect()->route('courseSubject.index', compact('course'));
     }
 
     /**

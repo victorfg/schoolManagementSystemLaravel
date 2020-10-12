@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +244,7 @@
       <workItem from="1601141567247" duration="2014000" />
       <workItem from="1602416280989" duration="5421000" />
       <workItem from="1602491871081" duration="21297000" />
-      <workItem from="1602520171572" duration="10017000" />
+      <workItem from="1602520171572" duration="10324000" />
     </task>
     <servers />
   </component>
@@ -352,10 +347,10 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="933" height="540" key="XDebugger.FullValuePopup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421077150" />
-    <state x="-126" y="172" width="1216" height="662" key="dock-window-1" timestamp="1602529288501">
+    <state x="-126" y="172" width="1216" height="662" maximized="true" key="dock-window-1" timestamp="1602530584263">
       <screen x="0" y="172" width="1360" height="741" />
     </state>
-    <state x="-126" y="172" width="1216" height="662" key="dock-window-1/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602529288501" />
+    <state x="-126" y="172" width="1216" height="662" maximized="true" key="dock-window-1/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602530584263" />
     <state x="443" y="351" width="632" height="516" key="find.popup" timestamp="1602499968012">
       <screen x="0" y="145" width="1360" height="768" />
     </state>

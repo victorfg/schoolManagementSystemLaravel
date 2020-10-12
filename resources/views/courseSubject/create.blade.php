@@ -4,7 +4,7 @@
     @section('content')
         @include('menu.app')
         <div class="container">
-            {{ Form::open(array('url' => route('subjects.store',$course->id))) }}
+            {{ Form::open(array('url' => route('courseSubject.store',$course->id))) }}
                 <h2 class="margin-top-20">Curso: {{$course->name}}</h2>
                 <h5 class="margin-top-20">Vincula el curso con la asignatura</h5>
                 <div class="row margin-top-20 align-items">
