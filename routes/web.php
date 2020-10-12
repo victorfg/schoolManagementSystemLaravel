@@ -11,6 +11,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserPasswordController;
 use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('test', [TestController::class, 'index']);
     Route::get('profile/modify', [UserProfileController::class, 'index'])->name('profile/modify');
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');
+    Route::get('profile/modify/password', [UserPasswordController::class,'edit'])->name('profile/modify/password');
+    Route::put('profile/modify/password', [UserPasswordController::class,'update'])->name('profile/modify/password');
 
     $crudMethods = ['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy'];
     Route::resource('course', CourseController::class)->only($crudMethods);
@@ -48,14 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
     Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only($crudMethods);
     Route::resource('calendar', CalendarController::class)->only('index');
+
+    Route::resource('user', UserController::class);
 });
 
-
-Route::resource('users', 'UsersController')->except('edit', 'destroy');
-Route::get('users/delete', 'UsersController@delete');
-
-
-Route::resource('users', 'UsersController')->except('edit', 'destroy');
-Route::get('users/delete', 'UsersController@delete');
-
-Route::resource('user-password', 'UserPasswordController')->only('update');

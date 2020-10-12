@@ -58,6 +58,9 @@
                                     <a class="dropdown-item" href="{{ route('profile/modify') }}">
                                         Perfil
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('profile/modify/password') }}">
+                                        Cambiar contraseña
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UsersStoreRequest;
 use App\User;
 use App\user;
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * @param \Illuminate\Http\Request $request
@@ -30,14 +29,16 @@ class UsersController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\UsersStoreRequest $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UsersStoreRequest $request)
+    public function store(Request $request)
     {
-        $user = User::create($request->validated());
+        $user = User::create($request->all());
 
-        return redirect()->route('user.show', ['user' => $user]);
+        $request->session()->flash('user.id', $user->id);
+
+        return redirect()->route('user.index');
     }
 
     /**
@@ -47,7 +48,17 @@ class UsersController extends Controller
      */
     public function show(Request $request, User $user)
     {
-        return view('user.show');
+        return view('user.show', compact('user'));
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @param \App\user $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Request $request, User $user)
+    {
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -57,19 +68,22 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user = User::find($id);
+        $user->update([]);
 
-        return view('user.destroy', compact('user'));
+        $request->session()->flash('user.id', $user->id);
+
+        return redirect()->route('user.index');
     }
 
     /**
      * @param \Illuminate\Http\Request $request
+     * @param \App\user $user
      * @return \Illuminate\Http\Response
      */
-    public function delete(Request $request)
+    public function destroy(Request $request, User $user)
     {
-        $user = User::find($id);
+        $user->delete();
 
-        return view('user.destroy', compact('user'));
+        return redirect()->route('user.index');
     }
 }
