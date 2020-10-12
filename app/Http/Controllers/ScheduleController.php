@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Events\NewSchedule;
 use App\Http\Requests\ScheduleStoreRequest;
 use App\Http\Requests\ScheduleUpdateRequest;
+use App\Models\Course;
+use App\Models\CourseSubject;
 use App\Models\Schedule;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -14,27 +17,29 @@ class ScheduleController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request, Course $course, Subject $subject)
     {
-        $schedules = Schedule::all();
+        $schedules = Schedule::where('course_id', $course->id)->where('subject_id', $subject->id)->get();
 
-        return view('schedule.index', compact('schedules'));
+        return view('schedule.index', compact('schedules','course','subject'));
     }
 
     /**
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create(Request $request, Course $course, Subject $subject)
     {
-        return view('schedule.create');
+        $courses = Course::all()->pluck('name','id');
+        $subjects =  Subject::all()->pluck('name','id');
+        return view('schedule.create',compact('course','subject','courses','subjects'));
     }
 
     /**
      * @param \App\Http\Requests\ScheduleStoreRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ScheduleStoreRequest $request)
+    public function store(ScheduleStoreRequest $request, Course $course, Subject $subject)
     {
         $schedule = Schedule::create($request->validated());
 
@@ -50,7 +55,7 @@ class ScheduleController extends Controller
      * @param \App\Models\Schedule $schedule
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, Schedule $schedule)
+    public function show(Request $request, Course $course, Subject $subject, Schedule $schedule)
     {
         $schedules = Schedule::all();
 
@@ -62,7 +67,7 @@ class ScheduleController extends Controller
      * @param \App\Models\Schedule $schedule
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Schedule $schedule)
+    public function edit(Request $request, Course $course, Subject $subject, Schedule $schedule)
     {
         return view('schedule.edit', compact('schedule'));
     }
@@ -72,7 +77,7 @@ class ScheduleController extends Controller
      * @param \App\Models\Schedule $schedule
      * @return \Illuminate\Http\Response
      */
-    public function update(ScheduleUpdateRequest $request, Schedule $schedule)
+    public function update(ScheduleUpdateRequest $request, Course $course, Subject $subject, Schedule $schedule)
     {
         $schedule->update($request->validated());
 
@@ -86,7 +91,7 @@ class ScheduleController extends Controller
      * @param \App\Models\Schedule $schedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Schedule $schedule)
+    public function destroy(Request $request, Course $course, Subject $subject, Schedule $schedule)
     {
         $schedule->delete();
 

@@ -20,6 +20,7 @@ class Schedule extends Model
         'time_start',
         'time_end',
         'active',
+        'days'
     ];
 
     /**

@@ -25,7 +25,7 @@
                             <td>{{$courseSubject->course->name}}</td>
                             <td>{{$courseSubject->subject->name}}</td>
                             <td><a href="{{route('subjects.edit', [$course->id, $courseSubject->id])}}" type="button" class="btn btn-primary">Modificar</a></td>
-                            <td><a href="{{route('schedule.index', [$course->id, $courseSubject->id])}}" type="button" class="btn btn-success">Horarios</a></td>
+                            <td><a href="{{route('schedules.index', [$course->id, $courseSubject->subject->id])}}" type="button" class="btn btn-success">Horarios</a></td>
                             <td>
                                 {{ Form::open(array('url' => route('subjects.destroy', [$course->id, $courseSubject->id]))) }}
                                     @method('DELETE')

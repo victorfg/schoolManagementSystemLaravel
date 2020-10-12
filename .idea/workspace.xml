@@ -2,53 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/UserTypes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/colors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseSubjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EnrollmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CourseStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CourseStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CourseUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CourseUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EnrollmentStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EnrollmentStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/EnrollmentUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/EnrollmentUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/enrollment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/enrollment/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/menu/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addcourse.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addsubjectincourse.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/addtimetabletosubject.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/editcourse.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/editsubjectincourse.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/edittimetabletosubject.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewallcourses.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewcoursessubjects.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/courses/viewtimetablesubjects.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/addmatriculate.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/editmatriculate.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/matriculates/viewallmatriculas.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/addsubject.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/editsubject.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/subjects/viewallsubjects.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subject/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subject/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subject/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subject/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,7 +239,7 @@
       <workItem from="1601133702943" duration="6635000" />
       <workItem from="1601141567247" duration="2014000" />
       <workItem from="1602416280989" duration="5421000" />
-      <workItem from="1602491871081" duration="12324000" />
+      <workItem from="1602491871081" duration="14511000" />
     </task>
     <servers />
   </component>
@@ -382,10 +341,10 @@
     </state>
     <state x="443" y="351" width="632" height="516" key="find.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602499968012" />
     <state x="1986" y="289" width="892" height="725" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602435873893" />
-    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602503530218">
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602505767377">
       <screen x="0" y="145" width="1360" height="768" />
     </state>
-    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602503530218" />
+    <state x="422" y="315" width="672" height="483" key="search.everywhere.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602505767377" />
     <state x="1956" y="239" width="672" height="678" key="search.everywhere.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602493514210" />
   </component>
   <component name="XDebuggerManager">

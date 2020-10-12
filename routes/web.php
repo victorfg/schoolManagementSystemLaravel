@@ -47,7 +47,7 @@ Route::resource('course', CourseController::class)->only($crudMethods);;
 
 Route::resource('subject', SubjectController::class)->only($crudMethods);
 
-Route::resource('course/{course}/subjects/{subject}/schedule', ScheduleController::class)->only($crudMethods);
+Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only($crudMethods);
 
 Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
 
