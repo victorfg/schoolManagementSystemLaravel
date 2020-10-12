@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CourseSubjectController;
 use App\Http\Controllers\EnrollmentController;
@@ -39,16 +40,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('test', [TestController::class, 'index']);
     Route::get('profile/modify', [UserProfileController::class, 'index'])->name('profile/modify');
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');
+
+    $crudMethods = ['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy'];
+    Route::resource('course', CourseController::class)->only($crudMethods);
+    Route::resource('subject', SubjectController::class)->only($crudMethods);
+    Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only($crudMethods);
+    Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
+    Route::resource('course/{course}/subjects', CourseSubjectController::class)->only($crudMethods);
+    Route::resource('calendar', CalendarController::class)->only('index');
 });
-
-$crudMethods = ['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy'];
-
-Route::resource('course', CourseController::class)->only($crudMethods);;
-
-Route::resource('subject', SubjectController::class)->only($crudMethods);
-
-Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only($crudMethods);
-
-Route::resource('enrollment', EnrollmentController::class)->only($crudMethods);
-
-Route::resource('course/{course}/subjects', CourseSubjectController::class)->only($crudMethods);

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDaysColumnToEnrollmentsTable extends Migration
+class AddDaysColumnToSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddDaysColumnToEnrollmentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('enrollments', function (Blueprint $table) {
+        Schema::table('schedules', function (Blueprint $table) {
             $table->string('days')->after('active');
         });
     }
@@ -25,7 +25,7 @@ class AddDaysColumnToEnrollmentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('enrollments', function (Blueprint $table) {
+        Schema::table('schedules', function (Blueprint $table) {
             $table->dropColumn('days');
         });
     }

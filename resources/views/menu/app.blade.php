@@ -1,6 +1,10 @@
 <div class="submenu-options">
     <div class="item-option margin-right-15 cursor-pointer">
 
+        <a href="{{route('calendar.index')}}">Semana</a>
+    </div>
+    <div class="item-option margin-right-15 cursor-pointer">
+
         <a href="{{route('subject.index')}}">Asignaturas</a>
     </div>
     <div class="item-option margin-right-15 cursor-pointer">

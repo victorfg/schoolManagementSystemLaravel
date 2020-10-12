@@ -2,7 +2,6 @@
     @extends('layouts.app')
 
     @section('content')
-        {{$schedules}}
         @include('menu.app')
         <div class="container">
             <h2 class="margin-top-20">Curso: {{$course->name}}</h2>
@@ -30,9 +29,9 @@
                             <td>{{$schedule->time_start}}</td>
                             <td>{{$schedule->time_end}}</td>
                             <td>{{$schedule->days}}</td>
-                            <td><a href="{{route('subjects.edit', $schedule->id)}}" type="button" class="btn btn-primary">Modificar</a></td>
+                            <td><a href="{{route('schedules.edit',  [$course->id,$subject->id,$schedule->id])}}" type="button" class="btn btn-primary">Modificar</a></td>
                             <td>
-                                {{ Form::open(array('url' => route('subjects.destroy', $schedule->id))) }}
+                                {{ Form::open(array('url' => route('schedules.destroy', [$course->id,$subject->id,$schedule->id]))) }}
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
                                 {{ Form::close() }}

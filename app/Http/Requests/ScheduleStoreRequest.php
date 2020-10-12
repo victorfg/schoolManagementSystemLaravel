@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Helpers\WeekDays;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ScheduleStoreRequest extends FormRequest
@@ -28,7 +29,24 @@ class ScheduleStoreRequest extends FormRequest
             'subject_id' => ['required', 'integer', 'exists:subjects,id'],
             'time_start' => ['required'],
             'time_end' => ['required'],
-            'active' => ['required'],
+            'active' => [],
+            'days'=>[]
         ];
+    }
+    public function validated()
+    {
+        $item = $this->validator->validated();
+
+        if(empty($item['active'])){
+            $item['active'] = false;
+        }
+
+        if(!is_bool($item['active'])){
+            $item['active'] = $item['active'] == 'on';
+        }
+
+        $item['days'] = WeekDays::arrayDaysToString($item['days']);
+
+        return $item;
     }
 }

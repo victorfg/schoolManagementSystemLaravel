@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewSchedule;
+use App\Helpers\WeekDays;
 use App\Http\Requests\ScheduleStoreRequest;
 use App\Http\Requests\ScheduleUpdateRequest;
 use App\Models\Course;
@@ -10,6 +11,7 @@ use App\Models\CourseSubject;
 use App\Models\Schedule;
 use App\Models\Subject;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class ScheduleController extends Controller
 {
@@ -30,9 +32,10 @@ class ScheduleController extends Controller
      */
     public function create(Request $request, Course $course, Subject $subject)
     {
+        $days = config('calendar.days');
         $courses = Course::all()->pluck('name','id');
         $subjects =  Subject::all()->pluck('name','id');
-        return view('schedule.create',compact('course','subject','courses','subjects'));
+        return view('schedule.create',compact('course','subject','courses','subjects','days'));
     }
 
     /**
@@ -47,7 +50,7 @@ class ScheduleController extends Controller
 
         $request->session()->flash('schedule.id', $schedule->id);
 
-        return redirect()->route('schedule.index');
+        return redirect()->route('schedules.index', compact('course','subject'));
     }
 
     /**
@@ -69,7 +72,20 @@ class ScheduleController extends Controller
      */
     public function edit(Request $request, Course $course, Subject $subject, Schedule $schedule)
     {
-        return view('schedule.edit', compact('schedule'));
+        $days = config('calendar.days');
+        $courses = Course::all()->pluck('name','id');
+        $subjects =  Subject::all()->pluck('name','id');
+
+
+        $selectedDays = WeekDays::stringDaysToNumberArray($schedule->days);
+
+        $schedule = $schedule->toArray();
+        $schedule['time_start'] = Carbon::parse($schedule['time_start'])->toTimeString();
+        $schedule['time_end'] = Carbon::parse($schedule['time_end'])->toTimeString();
+
+        $schedule = (object)$schedule;
+
+        return view('schedule.edit', compact('schedule','days','selectedDays','courses', 'subjects','course','subject'));
     }
 
     /**
@@ -83,7 +99,7 @@ class ScheduleController extends Controller
 
         $request->session()->flash('schedule.id', $schedule->id);
 
-        return redirect()->route('schedule.index');
+        return redirect()->route('schedules.index', compact('course','subject'));
     }
 
     /**
@@ -95,6 +111,6 @@ class ScheduleController extends Controller
     {
         $schedule->delete();
 
-        return redirect()->route('schedule.index');
+        return redirect()->route('schedules.index', compact('course','subject'));
     }
 }

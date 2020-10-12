@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bd978-8730-4fcc-96aa-11e2b337181d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Helpers/WeekDays.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/calendar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/calendar/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courseSubject/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ScheduleStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ScheduleStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ScheduleUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ScheduleUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_121533_add_days_column_to_enrollments_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +167,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/calendar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -173,8 +177,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/resources/views/calendar" />
       <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/app/Http/Requests" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -239,7 +244,7 @@
       <workItem from="1601133702943" duration="6635000" />
       <workItem from="1601141567247" duration="2014000" />
       <workItem from="1602416280989" duration="5421000" />
-      <workItem from="1602491871081" duration="14511000" />
+      <workItem from="1602491871081" duration="21297000" />
     </task>
     <servers />
   </component>
@@ -263,10 +268,10 @@
       <screen x="0" y="27" width="1866" height="1053" />
     </state>
     <state x="961" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1866.1053@0.27.1866.1053" timestamp="1600897477050" />
-    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602501807612">
+    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602518823193">
       <screen x="0" y="145" width="1360" height="768" />
     </state>
-    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602501807612" />
+    <state x="472" y="357" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602518823193" />
     <state x="2026" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1601143425053" />
     <state x="2525" y="146" width="690" height="563" key="#xdebugger.evaluate" timestamp="1602421702598">
       <screen x="1360" y="0" width="1920" height="1080" />
@@ -320,13 +325,15 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1822" height="413" key="GridCell.Tab.2.right/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602421691701" />
-    <state x="2044" y="266" width="487" height="555" key="NewPhpClassDialog" timestamp="1602435421085">
-      <screen x="1360" y="0" width="1920" height="1080" />
+    <state x="484" y="334" width="487" height="499" key="NewPhpClassDialog" timestamp="1602517401332">
+      <screen x="0" y="145" width="1360" height="768" />
     </state>
+    <state x="484" y="334" width="487" height="499" key="NewPhpClassDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602517401332" />
     <state x="2044" y="266" width="487" height="555" key="NewPhpClassDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602435421085" />
-    <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog" timestamp="1600511053101">
-      <screen x="1360" y="0" width="1920" height="1080" />
+    <state x="528" y="476" width="248" height="154" key="NewPhpFileDialog" timestamp="1602514738400">
+      <screen x="0" y="145" width="1360" height="768" />
     </state>
+    <state x="528" y="476" width="248" height="154" key="NewPhpFileDialog/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602514738400" />
     <state x="2106" y="466" width="363" height="154" key="NewPhpFileDialog/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1600511053101" />
     <state x="1789" y="175" width="1007" height="737" key="SettingsEditor" timestamp="1602442480332">
       <screen x="1360" y="0" width="1920" height="1080" />
@@ -341,6 +348,10 @@
     </state>
     <state x="443" y="351" width="632" height="516" key="find.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602499968012" />
     <state x="1986" y="289" width="892" height="725" key="find.popup/0.172.1360.741/1360.0.1920.1080@1360.0.1920.1080" timestamp="1602435873893" />
+    <state x="597" y="252" key="run.anything.popup" timestamp="1602514836995">
+      <screen x="0" y="145" width="1360" height="768" />
+    </state>
+    <state x="597" y="252" key="run.anything.popup/0.145.1360.768/1360.0.1920.1080@0.145.1360.768" timestamp="1602514836995" />
     <state x="422" y="315" width="672" height="483" key="search.everywhere.popup" timestamp="1602505767377">
       <screen x="0" y="145" width="1360" height="768" />
     </state>
