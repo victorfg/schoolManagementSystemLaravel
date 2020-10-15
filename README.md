@@ -3,6 +3,7 @@
 It is a simple Laravel & MySQL application that you can manage a school.
 
 [Video presentation (spanish)](http://vfernandez.me/uoc/video_laravel_gestion_escolar.mp4)
+
 ---
 
 ### Features
